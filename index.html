@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Under Construction</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="C:/Users/shree/Desktop/favicon.png" type="image/x-icon" />
+
+  <!-- Include Font Awesome for social icons (optional) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DhKNZ0Zycoq2UFSWnC6nIDqvISQp7icHBUA6G6ha8vZ7n77aRxh3Z63rtg8IXHsw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    /* Reset default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Blurred Background Image */
+    .bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('C:/Users/shree/Downloads/DeWatermark.ai_1743499433191.png.png') center/cover no-repeat;
+      filter: blur(8px);
+      z-index: 0;
+    }
+
+    /* Main Container */
+    .construction-container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.2);
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    /* Logo Section */
+    .logo {
+      margin-bottom: 1.5rem;
+    }
+    .logo img {
+      max-width: 100px;
+      height: auto;
+ border-radius: 15px; 
+    }
+
+    /* Headings & Text */
+    h1 {
+      font-size: 2.2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+    .tagline {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      max-width: 400px;
+    }
+
+    /* Progress Bar Section */
+    .progress-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      width: 100%;
+      max-width: 400px;
+    }
+    .progress-label {
+      font-size: 0.9rem;
+      color: #333;
+      margin: 0 0.5rem;
+      opacity: 0.8;
+    }
+    .progress-bar {
+      flex: 1;
+      background-color: rgba(255, 255, 255, 0.5);
+      height: 8px;
+      border-radius: 4px;
+      margin: 0 0.5rem;
+      overflow: hidden;
+      position: relative;
+    }
+    .progress-fill {
+      width: 0;
+      height: 100%;
+      background-color: #333;
+      border-radius: 4px 0 0 4px;
+      animation: fillBar 2s forwards;
+    }
+
+    /* Notify Button */
+    .notify-btn {
+      background-color: #fff;
+      color: #333;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 2rem;
+    }
+    .notify-btn:hover {
+      background-color: #ddd;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .social-icons a {
+      color: #333;
+      font-size: 1.2rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #111;
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer p {
+      font-size: 0.85rem;
+      color: #333;
+      opacity: 0.8;
+    }
+
+    /* Fade In Animation for Container */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Animate Progress Bar Fill */
+    @keyframes fillBar {
+      from {
+        width: 0;
+      }
+      to {
+        width: 30%; /* Adjust this percentage to your current progress */
+      }
+    }
+
+    /* Responsive Adjustments */
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .tagline {
+        font-size: 0.95rem;
+      }
+      .progress-label {
+        font-size: 0.8rem;
+      }
+      .notify-btn {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Blurred Background -->
+  <div class="bg-overlay"></div>
+
+  <!-- Main Container -->
+  <div class="construction-container">
+    <!-- Logo -->
+    <div class="logo">
+      <!-- Using your provided logo file name -->
+      <img src="C:/Users/shree/Desktop/logo.jpg" alt="Infinia Architects Logo" />
+    </div>
+
+    <!-- Title & Tagline -->
+    <h1>Infinia Architects</h1>
+    <p class="tagline">
+      We’re currently working on our website. Stay tuned for updates!
+    </p>
+
+    <!-- Progress Bar Section -->
+    <div class="progress-container">
+      <span class="progress-label">30%</span>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <span class="progress-label">100%</span>
+    </div>
+
+    <!-- Notify Button -->
+    <button class="notify-btn">Notify Me!</button>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Powered by Infinia Architects</p>
+    </footer>
+  </div>
+</body>
+</html>
